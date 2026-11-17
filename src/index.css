@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", Georgia, Cambria, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #061329;
+    color: #f1f5f9;
+  }
+}
+
+@keyframes rotary-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes launch-ripple {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1.65);
+    opacity: 0;
+  }
+}
+
+.animate-rotary-wheel {
+  animation: rotary-spin 64s linear infinite;
+  will-change: transform;
+}
+
+.animate-launch-ripple {
+  animation: launch-ripple 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rotary-wheel {
+    animation-duration: 180s;
+  }
+  .animate-launch-ripple {
+    animation: none;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Rotary Saampradaya — Website Launch",
+  "description": "Official website launch page for Rotary Saampradaya. Connecting Communities. Creating Impact.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
